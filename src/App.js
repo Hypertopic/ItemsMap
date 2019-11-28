@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const API_KEY = 'Replace with Google API key'; //TODO
+
 function App() {
   return (
     <div className="App">
@@ -16,7 +18,7 @@ function App() {
 class CityMap extends React.Component {
   render() {
     return (
-      <p>Ma carte de Troyes</p>
+      <img src={`https://maps.googleapis.com/maps/api/staticmap?center=Troyes&size=600x480&zoom=14&key=${API_KEY}`} />
     );
   }
 }
