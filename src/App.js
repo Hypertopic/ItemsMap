@@ -1,4 +1,5 @@
 import React from 'react';
+import hypertopic from 'hypertopic';
 import logo from './logo.svg';
 import './App.css';
 
