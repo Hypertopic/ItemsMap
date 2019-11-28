@@ -16,9 +16,15 @@ function App() {
 }
 
 class CityMap extends React.Component {
+  constructor() {
+    super();
+    this.state = {places:["Office du tourisme, Troyes"]};
+  }
+
   render() {
+    let markers = this.state.places.map(x => `&markers=${x}`);
     return (
-      <img src={`https://maps.googleapis.com/maps/api/staticmap?center=Troyes&size=600x480&zoom=14&key=${API_KEY}`} />
+      <img src={`https://maps.googleapis.com/maps/api/staticmap?center=Troyes&size=600x480&zoom=14${markers}&key=${API_KEY}`} />
     );
   }
 }
